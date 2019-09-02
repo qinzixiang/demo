@@ -8,3 +8,10 @@ spring:
     password: guest
 logging:
   config: classpath:logback-boot.xml
+  #日志存储地址
+  file: "logs/config/demo-xx.log"
+server:
+  #端口号
+  port: 8888
+  #项目名，如果不设定，默认是 /
+  #context-path: /
