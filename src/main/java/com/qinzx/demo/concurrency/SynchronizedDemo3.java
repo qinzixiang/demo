@@ -19,7 +19,7 @@ public class SynchronizedDemo3 implements Runnable{
     @Override
     public void run() {
         synchronized(instance) {
-            for(int i = 0; i< 5; i++) {
+            for(int i = 0; i< 10; i++) {
                 num++;
                 System.out.println("Thread-Id:"+Thread.currentThread().getId()+" num="+num);
             }
@@ -27,8 +27,10 @@ public class SynchronizedDemo3 implements Runnable{
     }
 
     public static void main(String[] args) throws InterruptedException {
-        Thread t1 = new Thread(instance);
-        Thread t2 = new Thread(instance);
+        SynchronizedDemo3 synchronizedDemo3 = new SynchronizedDemo3();
+        SynchronizedDemo3 synchronizedDemo31 = new SynchronizedDemo3();
+        Thread t1 = new Thread(synchronizedDemo3);
+        Thread t2 = new Thread(synchronizedDemo31);
 
         t1.start();
         t2.start();

@@ -4,8 +4,8 @@ spring:
   rabbitmq:
     host: 127.0.0.1
     port: 5672
-    username: guest
-    password: guest
+    username: admin
+    password: admin
 logging:
   config: classpath:logback-boot.xml
   #日志存储地址
