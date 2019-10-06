@@ -18,7 +18,7 @@ public class SingleRepoPackageService extends AbstractPackageService {
 
     public static void main(String... args) throws Exception {
         final boolean result = new SingleRepoPackageService().pack(oid, pid);
-        logger.log("allocated: %s", result);
+        logger.log("分配结果: %s", result);
     }
 
     @Override

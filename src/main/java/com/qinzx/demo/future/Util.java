@@ -20,7 +20,7 @@ public interface Util {
      * 仓库列表
      */
     Set<String> repos = new HashSet<>();
-    String oid = "jianshu";
+    String oid = "qinzx";
     String pid = "Samsung S10";
     Random r = new SecureRandom(ByteBuffer.allocate(4).putInt(LocalTime.now().getNano()).array());
 

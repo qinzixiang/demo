@@ -44,7 +44,7 @@ public abstract class AbstractPackageService implements PackageService {
         repos.clear();
         repos.addAll(getRepos());
         //初始化仓库
-        logger.log("initialized repos: %s", repos);
+        logger.log("初始化仓库: %s", repos);
         /* set started time. */
         logger.start();
         /* 监听订单取消事件 */
@@ -58,7 +58,7 @@ public abstract class AbstractPackageService implements PackageService {
         final CompletableFuture<Boolean> terminator =
                 allocated.applyToEitherAsync(cancelListener, Function.identity());
 
-        logger.log("pre-checking stock quickly...");
+        logger.log("正在快速预检查库存...");
 
         supplyAsync(() -> stockService.query(pid))
         .whenComplete((stock, e) -> {
@@ -66,10 +66,10 @@ public abstract class AbstractPackageService implements PackageService {
                 e.printStackTrace();
                 allocated.complete(false);
             } else if (stock < q) {
-                logger.log("not enough stock (%d < %d)", stock, q);
+                logger.log("库存不足 (%d < %d)", stock, q);
                 allocated.complete(false);
             } else {
-                logger.log("total stock is enough (%d >= %d). allocating from repos...", stock, q);
+                logger.log("总库存足够 (%d >= %d). 从仓库分配中...", stock, q);
                 startPick(pid);
             }
         });
@@ -112,7 +112,7 @@ public abstract class AbstractPackageService implements PackageService {
     /** allocate stock. */
     protected void allocateStock(Stock stock) {
         queriedQ.addAndGet(stock.count);
-        logger.log("repo %s was allocated %d", stock.repo, stock.count);
+        logger.log("仓库 %s 已分配 %d", stock.repo, stock.count);
     }
 
     /** check if all stocks are allocated enough. If yes, stop process. */
@@ -131,7 +131,7 @@ public abstract class AbstractPackageService implements PackageService {
             e.printStackTrace();
         }else if (!allocated.isDone()) {
             allocated.complete(false);
-            logger.log("didn't get enough stock.");
+            logger.log("没有充足的库存.");
         }
     }
 }

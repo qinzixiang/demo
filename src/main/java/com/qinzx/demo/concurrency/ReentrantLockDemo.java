@@ -5,7 +5,8 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * 锁
+ * 重入锁，完全可以替代synchronized关键字
+ *
  * @ClassName: ReentrantLockDemo
  * @Author qinzx
  * @Date 2019/07/13 13:42
@@ -13,7 +14,7 @@ import java.util.concurrent.locks.ReentrantLock;
  */
 public class ReentrantLockDemo implements Runnable {
     private Lock lock = new ReentrantLock();
-    private int tickets = 200;
+    public static int tickets = 200;
 
     @Override
     public void run() {

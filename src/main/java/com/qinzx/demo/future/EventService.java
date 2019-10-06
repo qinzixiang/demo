@@ -20,6 +20,6 @@ public class EventService {
      */
     public void listenOrderCancel(String order) {
         delay(2000, 300);
-        logger.log("cancelled with no reason");
+        logger.log("cancelled with no reason：" + order);
     }
 }

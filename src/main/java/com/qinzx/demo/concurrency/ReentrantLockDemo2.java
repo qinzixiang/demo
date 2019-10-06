@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
+ * 锁申请等待限时：避免死锁的一种方法
  * tryLock()方法立刻返回当前获取情况。
  *
  * tryLock(long time, TimeUnit unit)等待一定的时间，返回获取情况
