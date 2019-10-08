@@ -21,6 +21,7 @@ public class SynchronizedDemo2 implements Runnable{
      */
     public synchronized void incr1() {
         num++;
+        System.out.println("Thread-Id:"+Thread.currentThread().getId()+" num="+num);
     }
 
     /**
@@ -33,7 +34,7 @@ public class SynchronizedDemo2 implements Runnable{
 
     @Override
     public void run() {
-        for(int i = 0; i< 5; i++) {
+        for(int i = 0; i< 100; i++) {
             incr();
         }
     }
@@ -48,6 +49,7 @@ public class SynchronizedDemo2 implements Runnable{
         t2.start();
         t1.join();
         t2.join();
-        System.out.println("num="+num);   /**num=10*/
+        System.out.println("num="+num);
+        /**num=10*/
     }
 }
