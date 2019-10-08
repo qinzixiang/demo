@@ -7,6 +7,7 @@ import java.util.ArrayList;
 /**
  * 测试list
  * 1.contains方法
+ * 可以判断，空字符串和null是否在集合中
  *
  * @ClassName: ArrayListDemo
  * @Author qinzx
@@ -17,7 +18,9 @@ public class ArrayListDemo {
     public static void main(String[] args){
         ArrayList<String> strings = new ArrayList<>();
         strings.add("");
+        strings.add(null);
         Assert.isTrue(strings.contains(""));
+        Assert.isTrue(strings.contains(null));
 
     }
 }
