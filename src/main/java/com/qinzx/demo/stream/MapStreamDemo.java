@@ -1,8 +1,8 @@
 package com.qinzx.demo.stream;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.math.BigDecimal;
+import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * 映射流：
@@ -30,7 +30,11 @@ public class MapStreamDemo {
         private String player;
         /** 获得的金币数 */
         private int gold;
+        /** 得分 **/
+        private BigDecimal score;
+        public HeroPlayerGold() {
 
+        }
         public HeroPlayerGold(String hero, String player, int gold) {
             this.hero = hero;
             this.player = player;
@@ -60,7 +64,16 @@ public class MapStreamDemo {
         public void setGold(int gold) {
             this.gold = gold;
         }
-        //省略get/set/toString
+
+        public BigDecimal getScore() {
+            return score;
+        }
+
+        public void setScore(BigDecimal score) {
+            this.score = score;
+        }
+
+        //省略toString
     }
 
     //玩家获得的金币数
@@ -136,5 +149,23 @@ public class MapStreamDemo {
         //使用distinct()方法去重！
         citys.stream().flatMap(mCities->Arrays.stream(mCities.split(" "))).distinct().forEach(System.out::println);//note4
 
+        //list分组并排序，输出有序的TreeMap
+        List<HeroPlayerGold> manageExpensesDetailRatios = new ArrayList<>();
+        HeroPlayerGold manageExpensesRatioDetailDTO = new HeroPlayerGold();
+        manageExpensesRatioDetailDTO.setGold(1);
+        manageExpensesRatioDetailDTO.setScore(new BigDecimal("500.00"));
+        manageExpensesDetailRatios.add(manageExpensesRatioDetailDTO);
+        HeroPlayerGold manageExpensesRatioDetailDTO1 = new HeroPlayerGold();
+        manageExpensesRatioDetailDTO1.setGold(2);
+        manageExpensesRatioDetailDTO1.setScore(new BigDecimal("300.00"));
+        manageExpensesDetailRatios.add(manageExpensesRatioDetailDTO1);
+        HeroPlayerGold manageExpensesRatioDetailDTO2 = new HeroPlayerGold();
+        manageExpensesRatioDetailDTO2.setGold(3);
+        manageExpensesRatioDetailDTO2.setScore(new BigDecimal("9000.00"));
+        manageExpensesDetailRatios.add(manageExpensesRatioDetailDTO2);
+        List<HeroPlayerGold> collect = manageExpensesDetailRatios.stream().sorted(Comparator.comparing(HeroPlayerGold::getScore)).collect(Collectors.toList());
+        System.out.println(collect);
+        Map<BigDecimal, List<HeroPlayerGold>> expensesEndMap = manageExpensesDetailRatios.stream().collect(Collectors.groupingBy(HeroPlayerGold::getScore, TreeMap::new,Collectors.toList()));
+        System.out.println(expensesEndMap);
     }
 }
