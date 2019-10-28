@@ -88,6 +88,18 @@
             <artifactId>hutool-core</artifactId>
             <version>4.6.4</version>
         </dependency>
+        <!-- 搜索引擎依赖 -->
+        <dependency>
+            <groupId>org.elasticsearch.client</groupId>
+            <artifactId>transport</artifactId>
+            <version>7.4.0</version>
+        </dependency>
+        <!--  使用java rest high level client代替原始TransportClient -->
+        <dependency>
+            <groupId>org.elasticsearch.client</groupId>
+            <artifactId>elasticsearch-rest-high-level-client</artifactId>
+            <version>7.4.0</version>
+        </dependency>
     </dependencies>
 
     <build>

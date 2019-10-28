@@ -148,7 +148,9 @@ public class MapStreamDemo {
 
         //使用distinct()方法去重！
         citys.stream().flatMap(mCities->Arrays.stream(mCities.split(" "))).distinct().forEach(System.out::println);//note4
+    }
 
+    private static void treeMap() {
         //list分组并排序，输出有序的TreeMap
         List<HeroPlayerGold> manageExpensesDetailRatios = new ArrayList<>();
         HeroPlayerGold manageExpensesRatioDetailDTO = new HeroPlayerGold();
@@ -167,5 +169,8 @@ public class MapStreamDemo {
         System.out.println(collect);
         Map<BigDecimal, List<HeroPlayerGold>> expensesEndMap = manageExpensesDetailRatios.stream().collect(Collectors.groupingBy(HeroPlayerGold::getScore, TreeMap::new,Collectors.toList()));
         System.out.println(expensesEndMap);
+        for (Map.Entry<BigDecimal, List<HeroPlayerGold>> entry : expensesEndMap.entrySet()) {
+            System.out.println(entry.getKey());
+        }
     }
 }
