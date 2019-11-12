@@ -18,5 +18,6 @@ public class Receiver {
     @RabbitListener(queuesToDeclare = @Queue("myQueue"))
     public void receive(String msg) {
         log.info("mqReceive = {}", msg);
+        System.out.println(msg);
     }
 }
