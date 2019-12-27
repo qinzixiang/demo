@@ -42,5 +42,9 @@ public class ArrayListDemo {
         orgIds.removeIf(Long.valueOf(121)::equals);
 
         System.out.println(orgIds);
+        //空集合可以调用contains
+        ArrayList<Long> emptyLongList = new ArrayList<>();
+        boolean contains = emptyLongList.contains(1232L);
+        Assert.isFalse(contains);
     }
 }
