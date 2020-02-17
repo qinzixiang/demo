@@ -1,9 +1,9 @@
 package com.qinzx.demo.thirdjar.rabbitmq;
 
 import org.springframework.amqp.core.AmqpTemplate;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.Resource;
 import java.time.LocalDate;
 
 /**
@@ -14,12 +14,12 @@ import java.time.LocalDate;
  */
 @Component
 public class Sender {
-    @Autowired
+    @Resource
     private AmqpTemplate amqpTemplate;
 
     public void send() {
         String msg = "sender send..." + LocalDate.now();
-        amqpTemplate.convertAndSend("myQueue", msg);
+        amqpTemplate.convertAndSend("hello-test", msg);
     }
 
 }
