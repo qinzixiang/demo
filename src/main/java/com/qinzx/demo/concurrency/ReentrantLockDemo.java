@@ -14,7 +14,7 @@ import java.util.concurrent.locks.ReentrantLock;
  */
 public class ReentrantLockDemo implements Runnable {
     private Lock lock = new ReentrantLock();
-    public static int tickets = 200;
+    private static int tickets = 200;
 
     @Override
     public void run() {
