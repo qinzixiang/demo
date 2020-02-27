@@ -11,7 +11,6 @@ package com.qinzx.demo.jvm.chapter02;
  * 数组指针的移动。
  * @author qinzx
  * @date 2020/02/26 17:10
- * @Copyright (C) 杭州同基汽车科技有限公司
  */
 public class NotInitializationTest2 {
     public static void main(String[] args){

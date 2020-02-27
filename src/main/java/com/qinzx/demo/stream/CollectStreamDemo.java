@@ -12,10 +12,8 @@ import java.util.stream.Collectors;
  * 收集：
  * 有时候我们也是需要从流中收集起一些元素，并以集合的方式返回，我们把这种反向操作称为收集。流API也给我们提供了相应的方法。
  *
- * @ClassName: CollectStreamDemo
- * @Author qinzx
- * @Date 2019/07/11 16:55
- * @Copyright (C) 杭州同基汽车科技有限公司
+ * @author qinzx
+ * @date 2019/07/11 16:55
  */
 public class CollectStreamDemo {
     //玩家使用的英雄以及当前获得的金币数

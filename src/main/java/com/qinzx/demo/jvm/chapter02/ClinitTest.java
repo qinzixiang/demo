@@ -8,7 +8,6 @@ package com.qinzx.demo.jvm.chapter02;
  * 子类的clinit方法会在父类的clinit方法执行之后执行
  * @author qinzx
  * @date 2020/02/25 16:34
- * @Copyright (C) 杭州同基汽车科技有限公司
  */
 public class ClinitTest {
     static class Father {

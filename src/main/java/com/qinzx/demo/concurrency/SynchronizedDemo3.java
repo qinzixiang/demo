@@ -6,10 +6,8 @@ package com.qinzx.demo.concurrency;
  * 从下面的例子中可以看出，是将synchronized作用于一个给定的实例对象instance，当前实例对象就是锁对象，
  * 每次线程进入synchronized的代码块时就要求当前线程必须拿到instance实例的对象所，其他的线程就必须等待。
  *
- * @ClassName: SynchronizedDemo3
- * @Author qinzx
- * @Date 2019/07/09 15:25
- * @Copyright (C) 杭州同基汽车科技有限公司
+ * @author qinzx
+ * @date 2019/07/09 15:25
  */
 public class SynchronizedDemo3 implements Runnable{
     public static int num = 0;

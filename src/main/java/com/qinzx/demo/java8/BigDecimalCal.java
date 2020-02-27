@@ -3,10 +3,8 @@ package com.qinzx.demo.java8;
 import java.math.BigDecimal;
 
 /**
- * @ClassName: BigDecimalCal
- * @Author qinzx
- * @Date 2019/09/05 15:01
- * @Copyright (C) 杭州同基汽车科技有限公司
+ * @author qinzx
+ * @date 2019/09/05 15:01
  */
 public class BigDecimalCal {
     public static void main(String[] args){

@@ -9,10 +9,8 @@ import java.util.concurrent.locks.ReentrantLock;
  * 不允许Thread.interrupt中断,即使检测到Thread.isInterrupted,一样会继续尝试获取锁，失败则继续休眠。
  * 只是在最后获取锁成功后再把当前线程置为interrupted状态,然后再中断线程。
  *
- * @ClassName: ReentrantLockDemo1
- * @Author qinzx
- * @Date 2019/07/13 13:49
- * @Copyright (C) 杭州同基汽车科技有限公司
+ * @author qinzx
+ * @date 2019/07/13 13:49
  */
 public class ReentrantLockDemo1 implements  Runnable {
 

@@ -6,10 +6,8 @@ import java.util.concurrent.Future;
 
 /**
  * 同步查询商品价格
- * @ClassName: Shop
- * @Author qinzx
- * @Date 2019/07/11 11:01
- * @Copyright (C) 杭州同基汽车科技有限公司
+ * @author qinzx
+ * @date 2019/07/11 11:01
  */
 public class Shop {
     Random random = new Random();

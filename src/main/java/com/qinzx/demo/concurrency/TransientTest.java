@@ -12,10 +12,8 @@ import java.util.ListIterator;
  * 上关键字transient。当一个对象被序列化的时候，transient型变量的值不包括在序列化的表示中，
  * 然而非transient型的变量是被包括进去的。
  *
- * @ClassName: TransientTest
- * @Author qinzx
- * @Date 2019/07/09 17:49
- * @Copyright (C) 杭州同基汽车科技有限公司
+ * @author qinzx
+ * @date 2019/07/09 17:49
  */
 public class TransientTest implements Serializable {
     private static final long serialVersionUID = 233858934995755239L;

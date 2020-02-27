@@ -4,10 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @ClassName: ParamDemo
- * @Author qinzx
- * @Date 2019/06/05 16:49
- * @Copyright (C) 杭州同基汽车科技有限公司
+ * @author qinzx
+ * @date 2019/06/05 16:49
  */
 public class ParamDemo {
 

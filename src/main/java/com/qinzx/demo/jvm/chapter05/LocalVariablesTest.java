@@ -6,10 +6,8 @@ import org.apache.tomcat.jni.Local;
  * 局部变量表
  *
  * @author : qinzx
- * @program : demo
- * @description :
  * @create : 2020-02-16 17:25
- **/
+ */
 public class LocalVariablesTest {
     public static void main(String[] args) {
         LocalVariablesTest localVariablesTest = new LocalVariablesTest();

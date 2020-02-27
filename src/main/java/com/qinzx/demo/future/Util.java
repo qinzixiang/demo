@@ -1,10 +1,9 @@
 package com.qinzx.demo.future;
 
 /**
- * @ClassName: Util
- * @Author qinzx
- * @Date 2019/07/11 17:52
- * @Copyright (C) 杭州同基汽车科技有限公司
+ *
+ * @author qinzx
+ * @date 2019/07/11 17:52
  */
 import java.nio.ByteBuffer;
 import java.security.SecureRandom;

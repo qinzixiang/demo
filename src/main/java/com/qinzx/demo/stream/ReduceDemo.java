@@ -12,10 +12,8 @@ import java.util.Optional;
  * 结合体的话，它们代表了缩减操作。因为每个缩减操作都把一个流缩减为一个值，好比最大值，最小值。当然流API，把min()和max()，count()
  * 这些操作称为特例缩减。即然说到了特例，肯定就有泛化这种概念了，他就是reduce()方法了
  *
- * @ClassName: ReduceDemo
- * @Author qinzx
- * @Date 2019/07/11 15:59
- * @Copyright (C) 杭州同基汽车科技有限公司
+ * @author qinzx
+ * @date 2019/07/11 15:59
  */
 public class ReduceDemo {
     public static void main(String[] args) {

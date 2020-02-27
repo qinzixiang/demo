@@ -6,10 +6,8 @@ import java.util.Optional;
 import java.util.stream.Stream;
 
 /**
- * @ClassName: FirstStreamDemo
- * @Author qinzx
- * @Date 2019/07/11 14:11
- * @Copyright (C) 杭州同基汽车科技有限公司
+ * @author qinzx
+ * @date 2019/07/11 14:11
  */
 public class FirstStreamDemo {
     public static void main(String[] args) {

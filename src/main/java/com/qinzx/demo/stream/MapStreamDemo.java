@@ -15,10 +15,8 @@ import java.util.stream.Collectors;
  * 根据我们所学的知识，他的这种一对多的转换功能肯定就是映射函数提供的，这一点没有疑问吧！然后源码的注释上面还提供了一个例子，
  * 通过注释加例子，我相信大家都能非常清楚地理解flatMap()了。
  *
- * @ClassName: MapStreamDemo
- * @Author qinzx
- * @Date 2019/07/11 16:42
- * @Copyright (C) 杭州同基汽车科技有限公司
+ * @author qinzx
+ * @date 2019/07/11 16:42
  */
 public class MapStreamDemo {
 

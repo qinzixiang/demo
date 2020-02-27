@@ -2,10 +2,8 @@ package com.qinzx.demo.refactoring.firstdemo;
 
 /**
  * 重构添加的类
- * @ClassName: ChildrensPrice
- * @Author qinzx
- * @Date 2019/12/02 14:02
- * @Copyright (C) 杭州同基汽车科技有限公司
+ * @author qinzx
+ * @date 2019/12/02 14:02
  */
 public class ChildrensPrice extends Price {
 

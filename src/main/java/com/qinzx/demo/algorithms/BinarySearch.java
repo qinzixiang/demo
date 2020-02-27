@@ -12,7 +12,6 @@ import java.util.Arrays;
  * @ClassName: BinarySearch
  * @Author qinzx
  * @Date 2019/12/23 16:26
- * @Copyright (C) 杭州同基汽车科技有限公司
  */
 public class BinarySearch {
     public static int rank(int key, int[] a) {

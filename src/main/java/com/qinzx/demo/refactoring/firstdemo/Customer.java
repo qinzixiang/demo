@@ -5,10 +5,8 @@ import java.util.List;
 
 /**
  * 原代码中的vector替换成了ArrayList
- * @ClassName: Customer
- * @Author qinzx
- * @Date 2019/12/02 10:42
- * @Copyright (C) 杭州同基汽车科技有限公司
+ * @author qinzx
+ * @date 2019/12/02 10:42
  */
 public class Customer {
     private String name;

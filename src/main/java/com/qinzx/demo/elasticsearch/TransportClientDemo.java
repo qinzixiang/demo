@@ -8,10 +8,8 @@ import org.elasticsearch.common.settings.Settings;
 import org.elasticsearch.transport.client.PreBuiltTransportClient;
 
 /**
- * @ClassName: TransportClientDemo
- * @Author qinzx
- * @Date 2019/10/22 9:55
- * @Copyright (C) 杭州同基汽车科技有限公司
+ * @author qinzx
+ * @date 2019/10/22 9:55
  */
 public class TransportClientDemo {
 

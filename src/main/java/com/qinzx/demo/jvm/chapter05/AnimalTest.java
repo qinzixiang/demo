@@ -3,8 +3,6 @@ package com.qinzx.demo.jvm.chapter05;
 /**
  * 方法的绑定机制：早期绑定（静态绑定）和晚期绑定（动态绑定）
  * @author : qinzx
- * @program : demo
- * @description :
  * @create : 2020-02-16 22:16
  **/
 public class AnimalTest {

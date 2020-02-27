@@ -7,10 +7,8 @@ import javax.annotation.Resource;
 import java.time.LocalDate;
 
 /**
- * @ClassName: Sender
- * @Author qinzx
- * @Date 2019/05/07 11:23
- * @Copyright (C) 杭州同基汽车科技有限公司
+ * @author qinzx
+ * @date 2019/05/07 11:23
  */
 @Component
 public class Sender {

@@ -8,10 +8,8 @@ package com.qinzx.demo.concurrency;
  * 线程B调用这个实例对象所属的类的静态同步方法，他们之间是不存在互斥的，因此两个线程占用的锁是不一样的。
  * 但是如果两个方法共同操作同一个静态变量num，那么还是需要考虑线程安全的问题。
  *
- * @ClassName: SynchronizedDemo2
- * @Author qinzx
- * @Date 2019/07/09 15:20
- * @Copyright (C) 杭州同基汽车科技有限公司
+ * @author qinzx
+ * @date 2019/07/09 15:20
  */
 public class SynchronizedDemo2 implements Runnable{
     public static int num = 0;

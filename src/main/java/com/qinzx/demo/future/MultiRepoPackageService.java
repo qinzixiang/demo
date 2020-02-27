@@ -2,10 +2,8 @@ package com.qinzx.demo.future;
 
 /**
  * Not ThreadSafe and just for demo.
- * @ClassName: MultiRepoPackageService
- * @Author qinzx
- * @Date 2019/07/11 17:53
- * @Copyright (C) qinzx
+ * @author qinzx
+ * @date 2019/07/11 17:53
  */
 import com.google.common.collect.ImmutableSet;
 import java.util.Collection;

@@ -2,10 +2,8 @@ package com.qinzx.demo.refactoring.firstdemo;
 
 /**
  * 第一个示例程序
- * @ClassName: Movie
- * @Author qinzx
- * @Date 2019/12/02 10:37
- * @Copyright (C) 杭州同基汽车科技有限公司
+ * @author qinzx
+ * @date 2019/12/02 10:37
  */
 public class Movie {
     public static final int CHILDRENS = 2;

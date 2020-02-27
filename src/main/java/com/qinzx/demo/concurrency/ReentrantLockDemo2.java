@@ -9,10 +9,8 @@ import java.util.concurrent.locks.ReentrantLock;
  *
  * tryLock(long time, TimeUnit unit)等待一定的时间，返回获取情况
  *
- * @ClassName: ReentrantLockDemo2
- * @Author qinzx
- * @Date 2019/07/13 13:59
- * @Copyright (C) 杭州同基汽车科技有限公司
+ * @author qinzx
+ * @date 2019/07/13 13:59
  */
 public class ReentrantLockDemo2 implements Runnable {
     private ReentrantLock lock = new ReentrantLock();

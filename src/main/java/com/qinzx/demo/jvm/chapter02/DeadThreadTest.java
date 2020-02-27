@@ -2,10 +2,8 @@ package com.qinzx.demo.jvm.chapter02;
 
 /**
  * 虚拟机必须保证一个类的<clinit>方法在多线程下被同步加锁
- * @ClassName: DeadThreadTest
  * @author qinzx
  * @date 2020/02/25 16:28
- * @Copyright (C) 杭州同基汽车科技有限公司
  */
 public class DeadThreadTest {
     public static void main(String[] args){

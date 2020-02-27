@@ -3,10 +3,8 @@ package com.qinzx.demo.jvm.chapter05;
 /**
  * 演示方法调用，当前栈桢的切换
  * @author : qinzx
- * @program : demo
- * @description :
  * @create : 2020-02-16 14:26
- **/
+ */
 public class StackFrameTest {
     public static void main(String[] args) {
         StackFrameTest stackFrameTest = new StackFrameTest();

@@ -5,10 +5,8 @@ import java.text.SimpleDateFormat
 
 /**
  * kotlin 使用stream 倒序排序
- * @ClassName: StreamDemo
- * @Author qinzx
- * @Date 2019/09/24 20:37
- * @Copyright (C) 杭州同基汽车科技有限公司
+ * @author qinzx
+ * @date 2019/09/24 20:37
  */
 
 fun main(args: Array<String>) {

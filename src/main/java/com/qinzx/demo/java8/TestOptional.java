@@ -3,10 +3,8 @@ package com.qinzx.demo.java8;
 import java.util.Optional;
 
 /**
- * @ClassName: TestOptional
- * @Author qinzx
- * @Date 2019/04/29 12:45
- * @Copyright (C) 杭州同基汽车科技有限公司
+ * @author qinzx
+ * @date 2019/04/29 12:45
  */
 public class TestOptional {
     public static void main(String[] args){

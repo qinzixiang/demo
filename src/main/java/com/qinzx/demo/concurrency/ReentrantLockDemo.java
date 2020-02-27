@@ -7,10 +7,8 @@ import java.util.concurrent.locks.ReentrantLock;
 /**
  * 重入锁，完全可以替代synchronized关键字
  *
- * @ClassName: ReentrantLockDemo
- * @Author qinzx
- * @Date 2019/07/13 13:42
- * @Copyright (C) 杭州同基汽车科技有限公司
+ * @author qinzx
+ * @date 2019/07/13 13:42
  */
 public class ReentrantLockDemo implements Runnable {
     private Lock lock = new ReentrantLock();

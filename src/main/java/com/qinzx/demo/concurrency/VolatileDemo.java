@@ -15,10 +15,8 @@ import com.qinzx.demo.DemoApplication;
  *
  * volatile的特性：可见性，不能保证原子性
  * https://www.jianshu.com/p/2cfd551055d7
- * @ClassName: VolatileDemo
- * @Author qinzx
- * @Date 2019/06/05 16:46
- * @Copyright (C) 杭州同基汽车科技有限公司
+ * @author qinzx
+ * @date 2019/06/05 16:46
  */
 public class VolatileDemo {
     public volatile int inc = 0;

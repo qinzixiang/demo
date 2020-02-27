@@ -19,10 +19,8 @@ package com.qinzx.demo.concurrency;
  * 一个对象只有一把锁，当一个线程获取了该对象的锁之后，其他的线程就无法获取该对象的锁，
  * 但是其他的对象还是可以访问该实例对象的其他非synchronized方法。
  *
- * @ClassName: SynchronizedDemo
- * @Author qinzx
- * @Date 2019/07/09 15:15
- * @Copyright (C) 杭州同基汽车科技有限公司
+ * @author qinzx
+ * @date 2019/07/09 15:15
  */
 public class SynchronizedDemo implements Runnable{
     public static int num = 0;

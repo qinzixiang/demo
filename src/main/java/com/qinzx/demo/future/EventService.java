@@ -1,10 +1,8 @@
 package com.qinzx.demo.future;
 
 /**
- * @ClassName: EventService
- * @Author qinzx
- * @Date 2019/07/11 17:51
- * @Copyright (C) 杭州同基汽车科技有限公司
+ * @author qinzx
+ * @date 2019/07/11 17:51
  */
 import static com.qinzx.demo.future.Util.*;
 

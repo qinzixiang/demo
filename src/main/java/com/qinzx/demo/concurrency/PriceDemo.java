@@ -7,10 +7,8 @@ import java.util.stream.Collectors;
 
 /**
  * 异步查询商品价格
- * @ClassName: PriceDemo
- * @Author qinzx
- * @Date 2019/07/11 11:02
- * @Copyright (C) 杭州同基汽车科技有限公司
+ * @author qinzx
+ * @date 2019/07/11 11:02
  */
 public class PriceDemo {
     private List<Shop> shops = Arrays.asList(new Shop("shop1"),

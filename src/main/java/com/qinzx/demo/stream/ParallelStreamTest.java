@@ -6,10 +6,8 @@ import java.util.Optional;
 
 /**
  * 并行流使用
- * @ClassName: ParallelStreamTest
- * @Author qinzx
- * @Date 2019/07/11 11:22
- * @Copyright (C) 杭州同基汽车科技有限公司
+ * @author qinzx
+ * @date 2019/07/11 11:22
  */
 public class ParallelStreamTest {
     public static void main(String[] args){

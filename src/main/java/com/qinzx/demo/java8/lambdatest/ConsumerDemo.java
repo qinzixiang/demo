@@ -1,7 +1,5 @@
 package com.qinzx.demo.java8.lambdatest;
 
-import com.qinzx.demo.concurrency.ProducerConsumerTest;
-
 import java.util.function.Consumer;
 
 /**

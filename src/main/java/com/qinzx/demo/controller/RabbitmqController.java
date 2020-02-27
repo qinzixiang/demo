@@ -7,10 +7,8 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 
 /**
- * @ClassName: RabbitmqController
- * @Author qinzx
- * @Date 2019/05/11 18:09
- * @Copyright (C) 杭州同基汽车科技有限公司
+ * @author qinzx
+ * @date 2019/05/11 18:09
  */
 @RestController
 @RequestMapping("/rabbit")

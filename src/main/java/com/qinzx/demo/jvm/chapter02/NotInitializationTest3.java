@@ -8,7 +8,6 @@ package com.qinzx.demo.jvm.chapter02;
  * Class之后就不存在任何联系了。
  * @author qinzx
  * @date 2020/02/26 17:32
- * @Copyright (C) 杭州同基汽车科技有限公司
  */
 public class NotInitializationTest3 {
     public static void main(String[] args){

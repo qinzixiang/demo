@@ -4,10 +4,8 @@ import cn.hutool.core.date.DateUtil;
 
 /**
  * 时间转换一定要注意format字符串不能写错
- * @ClassName: OldDateDemo
- * @Author qinzx
- * @Date 2019/12/31 10:08
- * @Copyright (C) 杭州同基汽车科技有限公司
+ * @author qinzx
+ * @date 2019/12/31 10:08
  */
 public class OldDateDemo {
     public static void main(String[] args){

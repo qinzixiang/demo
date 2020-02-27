@@ -5,10 +5,8 @@ import java.util.concurrent.*;
 
 /**
  * 使用future和callable
- * @ClassName: FutureTest
- * @Author qinzx
- * @Date 2019/07/11 10:35
- * @Copyright (C) 杭州同基汽车科技有限公司
+ * @author qinzx
+ * @date 2019/07/11 10:35
  */
 public class FutureTest {
     public static void main(String[] args){
