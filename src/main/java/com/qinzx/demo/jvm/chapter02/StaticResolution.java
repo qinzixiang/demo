@@ -7,6 +7,7 @@ package com.qinzx.demo.jvm.chapter02;
  * @date 2020/02/27 20:35
  */
 public class StaticResolution {
+
     public static void sayHello() {
         System.out.println("hello world");
     }
