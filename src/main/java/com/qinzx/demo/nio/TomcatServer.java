@@ -14,7 +14,7 @@ import java.util.List;
  * @Copyright (C) 杭州同基汽车科技有限公司
  */
 public class TomcatServer {
-    static ByteBuffer byteBuffer = ByteBuffer.allocate(1024);
+    static ByteBuffer byteBuffer = ByteBuffer.allocate(512);
     static List<SocketChannel> channelList = new ArrayList<>();
     public static void main(String[] args){
         try {
@@ -27,13 +27,13 @@ public class TomcatServer {
                 for (SocketChannel socketChannel : channelList) {
                     int read = socketChannel.read(byteBuffer);
                     if (read > 0) {
-                        System.out.println("read------------"+read);
+                        System.out.println("read------------" + read);
                         byteBuffer.flip();
                         byte[] bs = new byte[read];
                         byteBuffer.get(bs);
                         String content = new String(bs);
                         System.out.println(content);
-                        byteBuffer.flip();
+                        byteBuffer.clear();
                     }
                 }
                 SocketChannel accept = serverSocket.accept();
