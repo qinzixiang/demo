@@ -5,7 +5,6 @@ import java.util.List;
 /**
  * @author qinzx
  * @date 2020/03/27 10:07
- * @Copyright (C) 杭州同基汽车科技有限公司
  */
 public class ListenerRunnable implements Runnable {
     private EventSource<EventListener> source;

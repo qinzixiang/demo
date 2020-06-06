@@ -4,7 +4,6 @@ package com.qinzx.demo.jvm.part5.thisescape;
  * 嵌套构造器调用会在编译期进行合并
  * @author qinzx
  * @date 2020/03/27 10:42
- * @Copyright (C) 杭州同基汽车科技有限公司
  */
 public class Test {
     public static void main(String[] args){

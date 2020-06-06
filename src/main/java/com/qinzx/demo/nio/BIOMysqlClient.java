@@ -8,7 +8,6 @@ import java.util.Scanner;
  *
  * @author qinzx
  * @date 2020/03/25 12:19
- * @Copyright (C) 杭州同基汽车科技有限公司
  */
 public class BIOMysqlClient {
 

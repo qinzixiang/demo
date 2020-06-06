@@ -20,7 +20,6 @@ package com.qinzx.demo.jvm.part5.thisescape;
  * 构造器的执行并不会创建对象，只有new+构造器的组合语句，才表示创建对象
  * @author qinzx
  * @date 2020/03/27 10:35
- * @Copyright (C) 杭州同基汽车科技有限公司
  */
 public class Glyph {
     void draw() { //没有执行

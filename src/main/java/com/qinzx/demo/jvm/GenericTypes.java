@@ -7,7 +7,6 @@ import java.util.List;
  * JDk 1.6 Javac 泛型重载示例
  * @author qinzx
  * @date 2020/03/25 16:55
- * @Copyright (C) 杭州同基汽车科技有限公司
  */
 public class GenericTypes {
 //    public static String method(List<String> list) {

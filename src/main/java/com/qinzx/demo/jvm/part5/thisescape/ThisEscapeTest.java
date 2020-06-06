@@ -9,7 +9,6 @@ package com.qinzx.demo.jvm.part5.thisescape;
  *
  * @author qinzx
  * @date 2020/03/27 10:08
- * @Copyright (C) 杭州同基汽车科技有限公司
  */
 public class ThisEscapeTest {
     public static void main(String[] args) {

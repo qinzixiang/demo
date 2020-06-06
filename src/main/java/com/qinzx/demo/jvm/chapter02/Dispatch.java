@@ -5,7 +5,6 @@ package com.qinzx.demo.jvm.chapter02;
  *
  * @author qinzx
  * @date 2020/02/29 9:43
- * @Copyright (C) 杭州同基汽车科技有限公司
  */
 public class Dispatch {
     static class QQ{
