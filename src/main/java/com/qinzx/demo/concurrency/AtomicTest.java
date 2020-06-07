@@ -1,5 +1,7 @@
 package com.qinzx.demo.concurrency;
 
+import sun.misc.Unsafe;
+
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
@@ -10,12 +12,12 @@ import java.util.concurrent.atomic.AtomicInteger;
  **/
 public class AtomicTest {
     private int inc = 0;
+    private Unsafe unsafe = Unsafe.getUnsafe();
     private AtomicInteger num = new AtomicInteger(0);
 
     private void increase() {
         inc++;
         num.getAndIncrement();
-        num.compareAndSet(num.intValue(), num.intValue() + 1);
     }
 
     public static void main(String[] args) {
