@@ -2,6 +2,8 @@ package com.qinzx.demo.concurrency;
 
 import com.qinzx.demo.DemoApplication;
 
+import java.util.concurrent.TimeUnit;
+
 /**
  * volatile是一个类型修饰符，他主要用于修饰被不同的线程访问和修改的变量，他是作为指令关键字，
  * 确保本条指令不会因编译器的优化而省略，且要求每次直接读值。
@@ -18,34 +20,57 @@ import com.qinzx.demo.DemoApplication;
  * @author qinzx
  * @date 2019/06/05 16:46
  */
+class MyData{
+    volatile int number = 0;
+
+    void addTo60() {
+        this.number = 60;
+    }
+}
 public class VolatileDemo {
-    public volatile int inc = 0;
+    private int inc = 0;
 
     /**
-     * 同步执行方法
+     * 同步执行方法，解决方案太重了，可以使用AtomicInteger对象
      */
-    public synchronized void increase() {
+    private synchronized void increase() {
         inc++;
     }
 
     public static void main(String[] args){
         final VolatileDemo test = new VolatileDemo();
-        for(int i=0;i<10;i++){
-            new Thread(){
-                @Override
-                public void run() {
-                    for (int j = 0; j < 1000; j++) {
-                        test.increase();
-                    }
-                };
-            }.start();
+        for(int i=0;i<20;i++){
+            new Thread(() -> {
+                for (int j = 0; j < 1000; j++) {
+                    test.increase();
+                }
+            }).start();
         }
-        //执行完毕之后系统活动线程数量可能因为守护线程的存在导致死循环，
-        while (Thread.activeCount() > 1) {
-            System.out.println(Thread.activeCount());
+        //判断前面创建的所有线程都关闭之后，退出程序，否则继续等待
+        // 剩余活动线程为main线程和gc守护线程，执行完毕之后系统活动线程数量可能因为守护线程的存在导致死循环，
+        while (Thread.activeCount() > 2) {
+//            System.out.println(Thread.activeCount());
             //保证前面的线程都执行完
             Thread.yield();
         }
         System.out.println(test.inc);
+    }
+    //volatile可以保证可见性示例
+    private static void seeOkByVolatile() {
+        MyData myData = new MyData();
+        new Thread(()->{
+            System.out.println(Thread.currentThread().getName()+"\t come in");
+            try {
+                TimeUnit.SECONDS.sleep(3);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            myData.addTo60();
+            System.out.println(Thread.currentThread().getName()+"\t updated number");
+        },"AAA").start();
+        while (myData.number == 0) {
+            //main线程一直等待
+        }
+        System.out.println(Thread.currentThread().getName()+"\t mission is over");
     }
 }
