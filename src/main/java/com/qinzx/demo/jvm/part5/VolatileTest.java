@@ -1,6 +1,8 @@
 package com.qinzx.demo.jvm.part5;
 
 /**
+ * volatile需要和atomic的类一起使用才能保证线程安全，例如：
+ *
  * volatile变量自增运算测试：演示volatile并发不安全
  * 虽然volatile在各个线程的工作内存中不存在一致性问题，但是Java里面的运算并非原子操作，导致volatile变量
  * 的运算在并发下一样是不安全的。
@@ -28,6 +30,7 @@ public class VolatileTest {
             threads[i].start();
         }
         while (Thread.activeCount() > 1) {
+            System.out.println(Thread.activeCount()+":"+ VolatileTest.race);
             Thread.yield();
         }
         System.out.println(race);

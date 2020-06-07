@@ -17,7 +17,7 @@ public class Sender {
 
     public void send() {
         String msg = "sender send..." + LocalDate.now();
-        amqpTemplate.convertAndSend("hello-test", msg);
+        amqpTemplate.convertAndSend("myQueue", msg);
     }
 
 }

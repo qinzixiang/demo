@@ -4,7 +4,6 @@ package com.qinzx.demo.future;
  * @ClassName: AbstractPackageService
  * @Author qinzx
  * @Date 2019/07/11 17:54
- * @Copyright (C) 杭州同基汽车科技有限公司
  */
 import java.util.Collection;
 import java.util.concurrent.CompletableFuture;

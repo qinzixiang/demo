@@ -1,5 +1,6 @@
 package com.qinzx.demo.kotlin.entity
 
+import java.math.BigDecimal
 import java.util.*
 
 /**
@@ -9,5 +10,6 @@ import java.util.*
  */
 data class Book(
         val id: Long? = null,
-        val create: Date? = null
+        val create: Date? = null,
+        val price:BigDecimal = BigDecimal.ZERO
 )

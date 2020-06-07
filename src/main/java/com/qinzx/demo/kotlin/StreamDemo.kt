@@ -1,7 +1,10 @@
 package com.qinzx.demo.kotlin
 
 import com.qinzx.demo.kotlin.entity.Book
+import java.math.BigDecimal
 import java.text.SimpleDateFormat
+import java.util.*
+import kotlin.collections.ArrayList
 
 /**
  * kotlin 使用stream 倒序排序
@@ -24,6 +27,15 @@ fun main(args: Array<String>) {
     //List<Object>转Map<Field, Object>
     val objList = listOf(User("1", 22), User("2", 18))
     val ageMap = objList.associateBy({ it.age }, { it })
+    //列表累计函数
+    val garageData = ArrayList<Book>()
+    garageData.add(Book(1, Date(), BigDecimal("12.32")))
+    garageData.add(Book(2, Date(), BigDecimal("13.00")))
+    garageData.add(Book(3, Date(), BigDecimal("15")))
+    val fold = garageData.fold(BigDecimal.ZERO) { acc: BigDecimal, repairDataStatisticsDO: Book ->
+        acc.add(repairDataStatisticsDO.price)
+    }
+    println("累计价格：$fold")
 }
 
 data class User(var name: String? = null, var age: Int)

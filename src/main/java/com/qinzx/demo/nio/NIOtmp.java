@@ -7,9 +7,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * 伪代码
  * @author qinzx
  * @date 2020/03/25 12:32
- * @Copyright (C) 杭州同基汽车科技有限公司
  */
 public class NIOtmp {
     static byte[] bs = new byte[1024];

@@ -11,7 +11,7 @@ import java.util.List;
  * NIO 示例
  * @author qinzx
  * @date 2020/03/25 12:43
- * @Copyright (C) 杭州同基汽车科技有限公司
+
  */
 public class TomcatServer {
     static ByteBuffer byteBuffer = ByteBuffer.allocate(512);

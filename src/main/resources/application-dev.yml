@@ -1,0 +1,19 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: demo
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: admin
+    password: admin
+logging:
+  config: classpath:logback-boot.xml
+  #日志存储地址
+  file: "logs/config/demo-xx.log"
+server:
+  #端口号
+  port: 8988
+  #项目名，如果不设定，默认是 /
+  #context-path: /

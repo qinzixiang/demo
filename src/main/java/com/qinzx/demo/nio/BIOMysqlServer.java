@@ -9,7 +9,6 @@ import java.net.Socket;
  * 需要借助多线程支持并发
  * @author qinzx
  * @date 2020/03/25 12:16
- * @Copyright (C) 杭州同基汽车科技有限公司
  */
 public class BIOMysqlServer {
     static byte[] bs = new byte[1024];

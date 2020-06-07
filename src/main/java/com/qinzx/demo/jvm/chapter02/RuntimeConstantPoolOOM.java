@@ -5,7 +5,6 @@ package com.qinzx.demo.jvm.chapter02;
  * 字符串常量池中存储，二JDK7、8只是会将这个字符串实例的引用保存到字符串常量池中。
  * @author qinzx
  * @date 2020/03/03 12:47
- * @Copyright (C) 杭州同基汽车科技有限公司
  */
 public class RuntimeConstantPoolOOM {
     public static void main(String[] args){
