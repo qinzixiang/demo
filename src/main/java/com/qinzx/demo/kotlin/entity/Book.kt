@@ -11,5 +11,6 @@ import java.util.*
 data class Book(
         val id: Long? = null,
         val create: Date? = null,
-        val price:BigDecimal = BigDecimal.ZERO
+        val price: BigDecimal = BigDecimal.ZERO,
+        val valid: Boolean? = null
 )
