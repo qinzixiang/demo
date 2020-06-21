@@ -1,6 +1,4 @@
-package com.qinzx.demo.concurrency;
-
-import lombok.Synchronized;
+package com.qinzx.demo.concurrency.lock;
 
 import java.util.concurrent.TimeUnit;
 

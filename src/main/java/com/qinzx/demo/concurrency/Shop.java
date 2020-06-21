@@ -6,6 +6,7 @@ import java.util.concurrent.Future;
 
 /**
  * 同步查询商品价格
+ * 使用Future实现异步调用，
  * @author qinzx
  * @date 2019/07/11 11:01
  */

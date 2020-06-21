@@ -1,4 +1,4 @@
-package com.qinzx.demo.concurrency;
+package com.qinzx.demo.concurrency.lock;
 
 /**
  * 3.修饰静态块

@@ -1,4 +1,4 @@
-package com.qinzx.demo.concurrency;
+package com.qinzx.demo.concurrency.lock;
 
 import org.springframework.util.StopWatch;
 
@@ -74,6 +74,9 @@ public class ReentrantReadWriteLockDemo {
             Thread thread = new Thread(writeRunnable);
             thread.start();
 //            thread.join();
+        }
+        while (Thread.activeCount() > 2) {
+            Thread.yield();
         }
         stopWatch.stop();
         System.out.println(stopWatch.prettyPrint());

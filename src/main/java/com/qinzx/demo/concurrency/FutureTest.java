@@ -9,8 +9,18 @@ import java.util.concurrent.*;
  * @date 2019/07/11 10:35
  */
 public class FutureTest {
+    public void chandeValue(String string) {
+        string = "ddd";
+    }
     public static void main(String[] args){
-        ExecutorService executorService = Executors.newCachedThreadPool();
+        FutureTest futureTest = new FutureTest();
+        String a = "123";
+        String b = new String("33d");
+        futureTest.chandeValue(a);
+        futureTest.chandeValue(b);
+        System.out.println(a);
+        System.out.println(b);
+        /*ExecutorService executorService = Executors.newCachedThreadPool();
         Future<Integer> result = executorService.submit(new Callable<Integer>() {
             @Override
             public Integer call() throws Exception {
@@ -25,6 +35,6 @@ public class FutureTest {
             e.printStackTrace();
         } catch (ExecutionException e) {
             e.printStackTrace();
-        }
+        }*/
     }
 }

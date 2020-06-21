@@ -1,4 +1,4 @@
-package com.qinzx.demo.concurrency;
+package com.qinzx.demo.concurrency.lock;
 
 /**
  * 2.修饰静态方法
