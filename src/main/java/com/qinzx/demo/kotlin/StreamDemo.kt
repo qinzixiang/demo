@@ -29,13 +29,17 @@ fun main(args: Array<String>) {
     val ageMap = objList.associateBy({ it.age }, { it })
     //列表累计函数
     val garageData = ArrayList<Book>()
-    garageData.add(Book(1, Date(), BigDecimal("12.32")))
-    garageData.add(Book(2, Date(), BigDecimal("13.00")))
-    garageData.add(Book(3, Date(), BigDecimal("15")))
+    garageData.add(Book(1, Date(), BigDecimal("12.32"), false))
+    garageData.add(Book(2, Date(), BigDecimal("13.00"), true))
+    garageData.add(Book(3, Date(), BigDecimal("15"), false))
     val fold = garageData.fold(BigDecimal.ZERO) { acc: BigDecimal, repairDataStatisticsDO: Book ->
         acc.add(repairDataStatisticsDO.price)
     }
     println("累计价格：$fold")
+    //根据布尔型字段排序
+    println(garageData)
+    garageData.sortByDescending { it.valid }
+    println(garageData)
 }
 
 data class User(var name: String? = null, var age: Int)
