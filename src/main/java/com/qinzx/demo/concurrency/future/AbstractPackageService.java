@@ -1,4 +1,4 @@
-package com.qinzx.demo.future;
+package com.qinzx.demo.concurrency.future;
 
 /**
  * @ClassName: AbstractPackageService
@@ -10,7 +10,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Function;
-import static com.qinzx.demo.future.Util.*;
+import static com.qinzx.demo.concurrency.future.Util.*;
 import static java.util.concurrent.CompletableFuture.*;
 
 /**

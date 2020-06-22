@@ -1,9 +1,11 @@
 package com.qinzx.demo.kotlin
 
 import com.qinzx.demo.kotlin.entity.Book
+import org.hibernate.validator.constraints.Length
 import java.math.BigDecimal
 import java.text.SimpleDateFormat
 import java.util.*
+import javax.validation.constraints.Min
 import kotlin.collections.ArrayList
 
 /**
@@ -25,8 +27,8 @@ fun main(args: Array<String>) {
     val sortedByDescending = list.sortedByDescending { it.create }
     println(sortedByDescending)
     //List<Object>转Map<Field, Object>
-    val objList = listOf(User("1", 22), User("2", 18))
-    val ageMap = objList.associateBy({ it.age }, { it })
+//    val objList = listOf(User("1", 22), User("2", 18))
+//    val ageMap = objList.associateBy({ it.age }, { it })
     //列表累计函数
     val garageData = ArrayList<Book>()
     garageData.add(Book(1, Date(), BigDecimal("12.32"), false))
@@ -42,4 +44,4 @@ fun main(args: Array<String>) {
     println(garageData)
 }
 
-data class User(var name: String? = null, var age: Int)
+data class User(@Length(max = 5, min = 2) var name: String? = null, @Min(5) var age: Int)

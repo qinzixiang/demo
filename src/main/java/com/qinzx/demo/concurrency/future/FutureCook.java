@@ -1,4 +1,4 @@
-package com.qinzx.demo.future;
+package com.qinzx.demo.concurrency.future;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;

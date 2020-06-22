@@ -1,4 +1,4 @@
-package com.qinzx.demo.future;
+package com.qinzx.demo.concurrency.future;
 
 /**
  * Not ThreadSafe and just for demo.
@@ -10,7 +10,7 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.concurrent.CompletableFuture;
 
-import static com.qinzx.demo.future.Util.*;
+import static com.qinzx.demo.concurrency.future.Util.*;
 
 import static java.util.concurrent.CompletableFuture.allOf;
 public class MultiRepoPackageService extends AbstractPackageService {

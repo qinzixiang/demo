@@ -1,11 +1,11 @@
-package com.qinzx.demo.future;
+package com.qinzx.demo.concurrency.future;
 
 /**
  * @author qinzx
  * @date 2019/07/11 17:51
  */
 
-import static com.qinzx.demo.future.Util.*;
+import static com.qinzx.demo.concurrency.future.Util.*;
 
 public class RepoService {
 

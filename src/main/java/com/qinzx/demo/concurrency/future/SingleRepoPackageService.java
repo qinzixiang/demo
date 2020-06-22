@@ -1,4 +1,4 @@
-package com.qinzx.demo.future;
+package com.qinzx.demo.concurrency.future;
 
 /**
  * Not ThreadSafe and just for demo.
@@ -8,7 +8,7 @@ package com.qinzx.demo.future;
 import com.google.common.collect.ImmutableSet;
 import java.util.Collection;
 
-import static com.qinzx.demo.future.Util.*;
+import static com.qinzx.demo.concurrency.future.Util.*;
 
 public class SingleRepoPackageService extends AbstractPackageService {
 

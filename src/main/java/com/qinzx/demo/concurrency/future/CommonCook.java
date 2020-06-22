@@ -1,4 +1,4 @@
-package com.qinzx.demo.future;
+package com.qinzx.demo.concurrency.future;
 
 /**
  * 假如你突然想做饭，但是没有厨具，也没有食材。网上购买厨具比较方便，食材去超市买更放心。

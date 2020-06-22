@@ -1,11 +1,11 @@
-package com.qinzx.demo.future;
+package com.qinzx.demo.concurrency.future;
 
 import com.google.common.collect.ImmutableMap;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
-import static com.qinzx.demo.future.Util.*;
+import static com.qinzx.demo.concurrency.future.Util.*;
 /**
  * @author zhhe.me@gmail.com
  * @since 9/9/2018
@@ -36,7 +36,7 @@ public class StockService {
      * @date  2019/7/12 15:09
      * @param repo
      * @param prd
-     * @return  com.qinzx.demo.future.Stock
+     * @return  com.qinzx.demo.concurrency.future.Stock
      */
     public Stock pick(String repo, String prd) {
         final Stock stock = new Stock(repo, stocks.get(repo));
