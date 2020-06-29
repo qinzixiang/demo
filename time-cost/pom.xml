@@ -2,13 +2,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <parent>
-        <artifactId>demo</artifactId>
-        <groupId>com.qinzx</groupId>
-        <version>0.0.1-SNAPSHOT</version>
-    </parent>
     <modelVersion>4.0.0</modelVersion>
-
+    <version>1.0</version>
     <groupId>com.qinzx</groupId>
     <artifactId>time-cost</artifactId>
     <dependencies>
@@ -18,22 +13,56 @@
             <artifactId>javassist</artifactId>
             <version>3.27.0-GA</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/junit/junit -->
+<!--        <dependency>-->
+<!--            <groupId>junit</groupId>-->
+<!--            <artifactId>junit</artifactId>-->
+<!--            <version>4.13</version>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
 
     </dependencies>
     <build>
         <plugins>
-            <plugin>
+           <!-- <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>3.1.2</version>
                 <configuration>
                     <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                        </manifest>
                         <manifestEntries>
-                            <Premain-Class>com.qinzx.TimeCostAgent</Premain-Class>
-                            <Boot-Class-Path>E:\repos\taotao\org\javassist\javassist\3.27.0-GA\javassist-3.27.0-GA.jar</Boot-Class-Path>
+                            <Premain-Class>com.qinzx.timecost.TimeCostAgent</Premain-Class>
+&lt;!&ndash;                            <Agent-Class>com.qinzx.timecost.TimeCostAgent</Agent-Class>&ndash;&gt;
+                            <Boot-Class-Path>classpath:javassist-3.27.0-GA.jar</Boot-Class-Path>
                         </manifestEntries>
                     </archive>
                 </configuration>
+            </plugin>-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.1.0</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <transformers>
+                                <transformer
+                                        implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                    <manifestEntries>
+                                        <Premain-Class>com.qinzx.timecost.TimeCostAgent</Premain-Class>
+                                    </manifestEntries>
+                                </transformer>
+                            </transformers>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>

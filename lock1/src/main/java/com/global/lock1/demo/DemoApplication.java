@@ -23,6 +23,7 @@ public class DemoApplication {
         try {
             System.out.println(new Date() + "lock1拿到锁");
             Thread.sleep(10000);
+            new Test().test();
             return "lock1拿到锁";
         } catch (Exception e) {
             e.printStackTrace();
