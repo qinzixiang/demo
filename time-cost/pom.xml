@@ -13,56 +13,38 @@
             <artifactId>javassist</artifactId>
             <version>3.27.0-GA</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/junit/junit -->
-<!--        <dependency>-->
-<!--            <groupId>junit</groupId>-->
-<!--            <artifactId>junit</artifactId>-->
-<!--            <version>4.13</version>-->
-<!--            <scope>test</scope>-->
-<!--        </dependency>-->
-
     </dependencies>
     <build>
         <plugins>
-           <!-- <plugin>
+<!--        此插件打包不包含第三方依赖，需要在Boot-Class-Path指明第三方包的查找路径-->
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>3.1.2</version>
                 <configuration>
                     <archive>
-                        <manifest>
-                            <addClasspath>true</addClasspath>
-                        </manifest>
                         <manifestEntries>
                             <Premain-Class>com.qinzx.timecost.TimeCostAgent</Premain-Class>
-&lt;!&ndash;                            <Agent-Class>com.qinzx.timecost.TimeCostAgent</Agent-Class>&ndash;&gt;
-                            <Boot-Class-Path>classpath:javassist-3.27.0-GA.jar</Boot-Class-Path>
+                            <Boot-Class-Path>E:/repos/taotao/org/javassist/javassist/3.27.0-GA/javassist-3.27.0-GA.jar</Boot-Class-Path>
                         </manifestEntries>
                     </archive>
                 </configuration>
-            </plugin>-->
+            </plugin>
+<!--            使用assembly插件则会将依赖的第三方包解压的文件打包到jar中，这样就不用在Boot-Class-Path中指定-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-shade-plugin</artifactId>
-                <version>3.1.0</version>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>shade</goal>
-                        </goals>
-                        <configuration>
-                            <transformers>
-                                <transformer
-                                        implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <manifestEntries>
-                                        <Premain-Class>com.qinzx.timecost.TimeCostAgent</Premain-Class>
-                                    </manifestEntries>
-                                </transformer>
-                            </transformers>
-                        </configuration>
-                    </execution>
-                </executions>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifestEntries>
+                            <Premain-Class>com.qinzx.timecost.TimeCostAgent</Premain-Class>
+<!--                            <Boot-Class-Path>javassist-3.27.0-GA.jar</Boot-Class-Path>-->
+                        </manifestEntries>
+                    </archive>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                </configuration>
             </plugin>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
