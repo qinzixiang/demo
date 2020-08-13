@@ -1,8 +1,0 @@
-server:
-  port: 8091
-spring:
-  redis:
-    url: 127.0.0.1
-    password: redis
-    timeout: 2000ms
-    database: 0
