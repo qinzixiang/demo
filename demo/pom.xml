@@ -110,7 +110,7 @@
             <artifactId>elasticsearch</artifactId>
             <version>7.4.0</version>
         </dependency>
-<!--        json-->
+        <!-- json -->
         <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -124,6 +124,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.1.4.RELEASE</version>
             </plugin>
             <plugin>
                 <groupId>org.jetbrains.kotlin</groupId>

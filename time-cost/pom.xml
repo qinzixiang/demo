@@ -33,6 +33,7 @@
 <!--            </plugin>-->
 <!--            使用assembly插件则会将依赖的第三方包解压的文件打包到jar中，这样就不用在Boot-Class-Path中指定-->
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
                 <version>3.3.0</version>
                 <executions>
@@ -62,6 +63,7 @@
                 </configuration>
             </plugin>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
