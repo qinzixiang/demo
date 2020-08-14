@@ -1,4 +1,5 @@
 <configuration>
+    <property name="LOG_PATH" value="${LOG_PATH:-.}"/>
     <!-- %m输出的信息, %p日志级别, %t线程名, %d日期, %c类的全名, %i索引 -->
     <!-- appender是configuration的子节点,是负责写日志的组件 -->
     <!-- ConsoleAppender把日志输出到控制台 -->
@@ -17,13 +18,13 @@
     <!-- 1.先按日期存日志，日期变了，将前一天的日志文件名重命名为xxx%日期%索引，新的日志仍然是sys.log -->
     <!-- 2.如果日期没有变化，但是当前日志文件的大小超过1kb时，对当前日志进行分割 重名名 -->
     <appender name="syslog" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <File>${catalina.base}/mylog/sys.log</File>
+        <File>${LOG_PATH}/mylog/sys.log</File>
         <!-- rollingPolicy:当发生滚动时，决定 RollingFileAppender 的行为，涉及文件移动和重命名。 -->
         <!-- TimeBasedRollingPolicy： 最常用的滚动策略，它根据时间来制定滚动策略，既负责滚动也负责出发滚动 -->
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!-- 活动文件的名字会根据fileNamePattern的值，每隔一段时间改变一次 -->
             <!-- 文件名：log/sys.2017-12-05.0.log -->
-            <fileNamePattern>${catalina.base}/mylog/sys.%d.%i.log</fileNamePattern>
+            <fileNamePattern>${LOG_PATH}/mylog/sys.%d.%i.log</fileNamePattern>
             <!-- 每产生一个日志文件，该日志文件的保存期限为30天 -->
             <maxHistory>30</maxHistory>
             <timeBasedFileNamingAndTriggeringPolicy  class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">

@@ -1,0 +1,2 @@
+lockWatchdogTimeout: 35000
+threads: 16
